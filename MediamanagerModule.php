@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\mediamanager;
+namespace artsoft\mediamanager;
 
 /**
  * mediamanager module definition class
@@ -10,7 +10,7 @@ class MediamanagerModule extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'backend\modules\mediamanager\controllers';
+    public $controllerNamespace = 'artsoft\mediamanager\controllers';
 
     /**
      * {@inheritdoc}

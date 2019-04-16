@@ -2,13 +2,13 @@
 
 namespace artsoft\mediamanager\controllers;
 
+use artsoft\controllers\admin\BaseController;
 use Yii;
 
-
 /**
- * DefaultController implements the CRUD actions for backend\modules\mediamanager\models\MediaManager model.
+ * DefaultController implements the CRUD actions for artsoft\mediamanager\models\MediaManager model.
  */
-class DefaultController extends \backend\controllers\DefaultController
+class DefaultController extends BaseController
 {
     public $modelClass  = 'artsoft\mediamanager\models\MediaManager';
      
