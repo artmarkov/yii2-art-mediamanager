@@ -4,6 +4,8 @@ use yii\db\Migration;
 
 class m190416_081103_create_table_media_manager extends Migration
 {
+    const MEDIA_MANAGER_TABLE = '{{%media_manager}}';
+    
     public function up()
     {
         $tableOptions = null;
@@ -11,7 +13,7 @@ class m190416_081103_create_table_media_manager extends Migration
             $tableOptions = 'CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%media_manager}}', [
+        $this->createTable(self::MEDIA_MANAGER_TABLE, [
             'id' => $this->primaryKey(),
             'class' => $this->string(),
             'item_id' => $this->integer(),
@@ -19,12 +21,12 @@ class m190416_081103_create_table_media_manager extends Migration
             'sort' => $this->smallInteger(),
         ], $tableOptions);
 
-        $this->createIndex('media_id', '{{%media_manager}}', 'media_id');
-        $this->addForeignKey('media_manager_ibfk_1', '{{%media_manager}}', 'media_id', '{{%media}}', 'id', 'CASCADE', 'CASCADE');
+        $this->createIndex('media_id', self::MEDIA_MANAGER_TABLE, 'media_id');
+        $this->addForeignKey('media_manager_ibfk_1', self::MEDIA_MANAGER_TABLE, 'media_id', '{{%media}}', 'id', 'CASCADE', 'CASCADE');
     }
 
     public function down()
     {
-        $this->dropTable('{{%media_manager}}');
+        $this->dropTable(self::MEDIA_MANAGER_TABLE);
     }
 }
