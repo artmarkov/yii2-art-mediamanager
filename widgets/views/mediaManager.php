@@ -53,7 +53,7 @@ EOF;
 ?>
        
         <div class="form-group clearfix">
-            <label class="control-label" style="float: left; padding-right: 5px;"><?= Yii::t('yee/media', 'Album') ?></label>               
+            <label class="control-label" style="float: left; padding-right: 5px;"><?= Yii::t('art/media', 'Album') ?></label>               
         </div>
         <?php
         echo SortableInput::widget([
@@ -79,7 +79,7 @@ EOF;
     ])
     ?>
 
-    <?= Html::a(Yii::t('yee/media', 'To keep order'), ['#'], [
+    <?= Html::a(Yii::t('art/media', 'To keep order'), ['#'], [
         'class' => 'btn btn-info save-sort',
         
     ]);
@@ -95,7 +95,7 @@ $('.save-sort').on('click', function (e) {
     e.preventDefault();
    
     $.ajax({
-        url: '/artsoft/mediamanager/default/sort-media',
+        url: '/admin/mediamanager/default/sort-media',
         data: {sortList: $("#carousel-sort").val()},
         type: 'POST',
     });
@@ -108,7 +108,7 @@ $('.remove-media-item').on('click', function (e) {
     var id = $(this).data('id');
 
     $.ajax({
-        url: '/artsoft/mediamanager/default/remove-media',
+        url: '/admin/mediamanager/default/remove-media',
         data: {id: id},
         type: 'POST',
     });

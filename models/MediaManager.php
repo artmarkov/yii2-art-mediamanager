@@ -123,7 +123,7 @@ class MediaManager extends \yii\db\ActiveRecord
                                         'data-id' => $item['id'], 
                                         'href' => '#', 
                                         'alt' => '', 
-                                        'title' => Yii::t('yee', 'Delete')
+                                        'title' => Yii::t('art', 'Delete')
                                     ]);
           $content .= Html::endTag('div');
           $data[$key] = ['content' => $content];
@@ -132,4 +132,12 @@ class MediaManager extends \yii\db\ActiveRecord
         
         return $data;
     } 
+//     public static function getMediaById($id) {
+//        return self::find()
+//                        ->leftJoin('media', 'media_manager.media_id = media.id')
+//                        ->where(['media.id' => $id])
+//                        ->select(['media_manager.class AS class', 'media_manager.item_id as item_id'])
+//                        ->orderBy('media_manager.id')
+//                        ->asArray()->all();
+//    }
 }
