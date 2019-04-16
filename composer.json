@@ -1,0 +1,23 @@
+{
+  "name": "artsoft/yii2-art-mediamanager",
+  "description": "Mediamanager Module For Art CMS",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Artur Markov",
+      "email": "artmarkov@mail.ru"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "artsoft/yii2-art-core": "dev-master",
+    "artsoft/yii2-art-media": "dev-master",
+    "kartik-v/yii2-sortable-input": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "artsoft\\mediamanager\\": ""
+    }
+  }
+}
