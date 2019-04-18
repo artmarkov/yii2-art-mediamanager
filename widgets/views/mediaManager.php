@@ -79,7 +79,7 @@ EOF;
     ])
     ?>
 
-    <?= Html::a(Yii::t('art/media', 'To keep order'), ['#'], [
+    <?= Html::a(Yii::t('art/media', 'To keep order'), ['/mediamanager/default/sort-media'], [
         'class' => 'btn btn-info save-sort',
         
     ]);
