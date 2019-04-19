@@ -2,23 +2,12 @@
 
 use artsoft\db\PermissionsMigration;
 
-class m190418_223710_add_media_manager_permissions extends PermissionsMigration
+class m190418_223710_add_media_permissions extends PermissionsMigration
 {
-
-    public function beforeUp()
-    {
-        $this->addPermissionsGroup('mediaManagerManagement', 'Media Manager Management');
-    }
-
-    public function afterDown()
-    {
-        $this->deletePermissionsGroup('mediaManagerManagement');
-    }
-
     public function getPermissions()
     {
         return [
-            'mediaManagerManagement' => [
+            'mediaManagement' => [
                 'links' => [
                     '/admin/mediamanager/*',
                 ],
