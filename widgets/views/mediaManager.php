@@ -8,7 +8,7 @@ use yii\widgets\Pjax;
 use artsoft\mediamanager\models\MediaManager;
 
 ?>
-                    
+
 <?php
     $modelClass = str_replace("\\","\\\\", $model->className());
 
@@ -43,17 +43,17 @@ use artsoft\mediamanager\models\MediaManager;
            });
        }
 EOF;
-?>                    
-                    
+?>
+
 <?php
 //Pjax::begin([
 //    'id' => 'pjax-carousel-container',
 //    'enablePushState' => false,
 //]);
 ?>
-       
+
         <div class="form-group clearfix">
-            <label class="control-label" style="float: left; padding-right: 5px;"><?= Yii::t('art/media', 'Album') ?></label>               
+            <label class="control-label" style="float: left; padding-right: 5px;"><?= Yii::t('art/media', 'Album') ?></label>
         </div>
         <?php
         echo SortableInput::widget([
@@ -81,11 +81,11 @@ EOF;
 
     <?= Html::a(Yii::t('art/media', 'To keep order'), ['/mediamanager/default/sort-media'], [
         'class' => 'btn btn-info save-sort',
-        
+
     ]);
     ?>
 
-</div> 
+</div>
 
 <?php
 $js = <<<JS
